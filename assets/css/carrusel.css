@@ -1,51 +1,75 @@
-body{
-    background:#000;
-  }
-  
-  section.awSlider .carousel{
-    display:table;
-    z-index:2;
-    -moz-box-shadow: 0 0 4px #444;
-      -webkit-box-shadow: 0 0 4px #444;
-      box-shadow: 0 0 15px rgba(1,1,1,.5);
-  }
-  
-  section.awSlider{
-    margin:30px auto;
-    padding:30px;
-    position:relative;
-    display:table;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  section.awSlider:hover > img{
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    opacity:1;
-  }
-  
-  section.awSlider img{
-     pointer-events: none;
-  }
-  
-  section.awSlider > img{
-    position:absolute;
-    top:30px;
-    z-index:1;
-    transition:all .3s;
-    filter: blur(1.8vw);
-    -webkit-filter: blur(2vw);
-    -moz-filter: blur(2vw); 
-    -o-filter: blur(2vw); 
-    -ms-filter: blur(2vw);
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    opacity:.5;
-  }
+:root {
+    --arrow-font-size: 30px;
+    --arrow-color: #000000;
+    --arrow-color-lightbox: #ffffff;
+}
+
+.XXXXX__slide img {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.slick-slider:not(.hero__slider) .slick-prev + .slick-list .slick-slide {
+    padding: 0 35px;
+}
+
+.slick-slider:not(.hero__slider) .slick-prev:before,
+.slick-slider:not(.hero__slider) .slick-next:before {
+    font-size: var(--arrow-font-size);
+    color: var(--arrow-color);
+}
+
+.slick-lightbox .slick-slider:not(.hero__slider) .slick-prev:before,
+.slick-lightbox .slick-slider:not(.hero__slider) .slick-next:before {
+    color: var(--arrow-color-lightbox);
+}
+
+.slick-slider:not(.hero__slider) .slick-prev,
+.slick-slider:not(.hero__slider) .slick-next {
+    height: initial;
+    width: initial;
+    z-index: 4;
+}
+
+.slick-slider:not(.hero__slider) .slick-prev {
+    left: 0;
+}
+
+.slick-slider:not(.hero__slider) .slick-next {
+    right: 0;
+}
+
+.slick-lightbox .slick-slider:not(.hero__slider) .slick-prev {
+    left: 15px;
+}
+
+.slick-lightbox .slick-slider:not(.hero__slider) .slick-next {
+    right: 15px;
+}
+
+@media only screen and (min-width: 1600px) {
+    .slick-slider:not(.hero__slider) .slick-prev + .slick-list .slick-slide {
+        padding: 0;
+    }
+
+    .slick-slider:not(.hero__slider) .slick-prev {
+        left: unset;
+        right: calc(100% + 30px);
+    }
+
+    .slick-slider:not(.hero__slider) .slick-next {
+        left: calc(100% + 30px);
+        right: unset;
+    }
+}
+
+    .slick-lightbox .slick-slider:not(.hero__slider) .slick-prev {
+        left: 30px;
+        right: unset;
+    }
+
+    .slick-lightbox .slick-slider:not(.hero__slider) .slick-next {
+        right: 30px;
+        left: unset;
+    }
+}
