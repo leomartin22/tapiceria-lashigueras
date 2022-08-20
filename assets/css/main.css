@@ -1917,9 +1917,9 @@ input, select, textarea {
 		}
 
 		#header h1 {
-			font-family: 'Dancing Script', cursive;			
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;			
 			font-weight: bold;
-			color: #d67e18;
+			color: #a573af;
 			text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
 			font-size: 4em;
 			letter-spacing: 13px;
